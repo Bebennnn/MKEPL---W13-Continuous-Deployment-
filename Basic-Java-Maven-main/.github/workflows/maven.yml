@@ -35,7 +35,7 @@ jobs:
       run: mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=jatihusen -Dsonar.projectKey=jatihusen_Basic-Java-Maven
       
     - name: Verify settings.xml exists in .m2 directory
-      run: ls -al ~/.m2
+      run: ls -al
       
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
